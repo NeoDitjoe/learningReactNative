@@ -3,8 +3,10 @@
 import { StyleSheet } from "react-native";
 
 const MyOwnSyles = StyleSheet.create({
-  container : {
+  storiesContainer : {
     // flex: 1,
+    height: 100,
+    backgroundColor: 'white'
   },
 
   stories: { 
@@ -18,7 +20,7 @@ const MyOwnSyles = StyleSheet.create({
   },
 
   feed:{
-    
+    height: 500
   }
 });
 
