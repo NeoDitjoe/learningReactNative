@@ -40,8 +40,13 @@ const MyOtherOwn = () => {
 const MyOwn = () => {
 
   return (
-    <Stack.Navigator>
-      <Stack.Screen name='Instagram' component={MyOtherOwn} />
+    <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'papayawhip'} }}>
+      <Stack.Screen 
+        name='Instagram' 
+        component={MyOtherOwn} 
+        options={{ headerShown: false, presentation: 'transparentModal'}}
+      
+      />
     </Stack.Navigator>
   )
 };

@@ -7,7 +7,7 @@ const ProfileNavigator = () => {
 
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Overview' component={OverViewScreen} />
+      <Stack.Screen name='Overview' component={OverViewScreen} options={{ headerShown: false}}/>
     </Stack.Navigator>
   )
 };

@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from './globalStyles';
 import ProfileNavigator from './components/Profile/profile';
 import MyOwn from './components/my-own/my-own';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const FeedScreen = () => (
   <View style={styles.layout}>
@@ -13,6 +14,7 @@ const FeedScreen = () => (
 );
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator()
 
 export const AppNavigator = () => (
   <Tab.Navigator>
@@ -22,9 +24,17 @@ export const AppNavigator = () => (
   </Tab.Navigator>
 );
 
+export const StackNavigator = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Profile" component={ProfileNavigator} />
+    <Stack.Screen name="Feed" component={FeedScreen} />
+    <Stack.Screen name="MyOwn" component={MyOwn} />
+  </Stack.Navigator>
+);
+
 const App = () => (
   <NavigationContainer>
-    <AppNavigator />
+    <StackNavigator />
   </NavigationContainer>
 );
 
